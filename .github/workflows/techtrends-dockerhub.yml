@@ -1,7 +1,7 @@
 
 name: TechTrends - Package with Docker
 
-on:[push]
+on: [push]
 
 jobs:
   build:
