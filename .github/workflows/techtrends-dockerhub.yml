@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./Dockerfile
+          file: ./project/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: sailing9924/techtrends:v1.0.0
+          tags: sailing9924/techtrends:latest
