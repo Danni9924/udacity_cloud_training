@@ -1,7 +1,7 @@
 FROM python:3.8
 LABEL maintainer="Danni Zhang"
 
-COPY ./techtrends /app
+COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 RUN python3 init_db.py
