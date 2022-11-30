@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: dockerfile
+          file: ./Dockerfile
           working_directory: './udacity_cloud_training'
           platforms: linux/amd64
           push: true
