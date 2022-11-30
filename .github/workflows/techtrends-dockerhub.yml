@@ -27,7 +27,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          working_directory: './udacity_cloud_training'
           platforms: linux/amd64
           push: true
           tags: sailing9924/techtrends:latest
