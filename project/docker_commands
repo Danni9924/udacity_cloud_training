@@ -1,12 +1,43 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
+docker build -t techtrends .
+
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
 
+docker run -d -p 7111:3111 techtrends
+
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
 
+docker logs 8f5818cde80f
+
+
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
-#push test 2
+
+danniz@N-20L6PF1RC6R7:~/nd064_course_1/project$ docker ps
+CONTAINER ID   IMAGE        COMMAND            CREATED         STATUS         PORTS                    NAMES
+8f5818cde80f   techtrends   "python3 app.py"   7 minutes ago   Up 7 minutes   0.0.0.0:7111->3111/tcp   quirky_goldstine
+danniz@N-20L6PF1RC6R7:~/nd064_course_1/project$ docker logs 8f5818cde80f
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 19:55:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 19:55:25] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 19:55:25] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 19:59:31] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 19:59:31] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:New Article "Danni Article" was created!
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 20:00:10] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 20:00:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 20:00:10] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Article "Danni Article" retrieved!
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 20:00:39] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [29/Nov/2022 20:00:39] "GET /static/css/main.css HTTP/1.1" 304 -
